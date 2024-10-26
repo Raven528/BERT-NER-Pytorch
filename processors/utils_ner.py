@@ -29,6 +29,8 @@ class DataProcessor(object):
             return lines
 
     @classmethod
+    # 读取数据,按照""、"\n"、"-DOCSTART-"进行分割，得到句子和标签
+    # 句子和标签分别存储在words和labels中
     def _read_text(self,input_file):
         lines = []
         with open(input_file,'r') as f:
